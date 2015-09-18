@@ -26,11 +26,6 @@
             android:label="@string/title_activity_rules" >
         </activity>
         <activity
-            android:name=".RegisterActivity"
-            android:label="@string/title_activity_register"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
-        </activity>
-        <activity
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration" >
         </activity>
@@ -53,6 +48,10 @@
         <activity
             android:name=".FeedbackOneActivity"
             android:label="@string/title_activity_feedback_one" >
+        </activity>
+        <activity
+            android:name=".FeedbackTwoActivity"
+            android:label="@string/title_activity_feedback_two" >
         </activity>
     </application>
 

@@ -56,4 +56,5 @@
     <string name="intro1">On this platform we learn from each other.</string>
     <string name="intro2">And you can win a prize daily!</string>
     <string name="handshake_description">An outstretched handshake</string>
+    <string name="title_activity_feedback_two">Challenge 2</string>
 </resources>

@@ -7,18 +7,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class FeedbackOneActivity extends AppCompatActivity {
+public class FeedbackTwoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feedback_one);
+        setContentView(R.layout.activity_feedback_two);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_feedback_one, menu);
+        getMenuInflater().inflate(R.menu.menu_feedback_two, menu);
         return true;
     }
 
@@ -37,7 +37,7 @@ public class FeedbackOneActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void continueButton(View view) {
-        Intent intent = new Intent(this, FeedbackTwoActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, QuestionThreeActivity.class);
+        //startActivity(intent);
     }
 }
