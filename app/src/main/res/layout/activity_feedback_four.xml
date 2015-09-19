@@ -109,5 +109,7 @@
         android:id="@+id/uploadedImageView"
         android:layout_centerHorizontal="true"
         android:layout_above="@+id/linearLayout12"
-        android:layout_below="@+id/button14" />
+        android:layout_below="@+id/button14"
+        android:src="@drawable/shellcool"
+        android:visibility="invisible" />
 </RelativeLayout>

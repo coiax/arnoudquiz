@@ -2,11 +2,13 @@ package nl.shell.arnoud.arnoudcustomerquiz;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,7 +16,8 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 
 public class FeedbackFourActivity extends AppCompatActivity {
-    private static final int SELECT_PICTURE = 1;
+    private static final int SELECT_PICTURE = 123;
+    private static final String TAG = "FeedbackFourActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +47,8 @@ public class FeedbackFourActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void continueButton(View view) {
-        Intent intent = new Intent(this, FeedbackFourActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, FeedbackFiveActivity.class);
+        //startActivity(intent);
     }
 
     public void browseButton(View view) {
@@ -58,34 +61,13 @@ public class FeedbackFourActivity extends AppCompatActivity {
         startActivityForResult(Intent.createChooser(intent,
                 "Select Picture"), SELECT_PICTURE);
     }
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == RESULT_OK) {
-            if (requestCode == SELECT_PICTURE) {
-                Uri selectedImageUri = data.getData();
-                String selectedImagePath = getPath(selectedImageUri);
-                ImageView imageView = (ImageView) findViewById(R.id.uploadedImageView);
-                imageView.setImageBitmap(BitmapFactory.decodeFile(selectedImagePath));
-            }
-        }
+        super.onActivityResult(requestCode, resultCode, data);
+        ImageView imageView = (ImageView) findViewById(R.id.uploadedImageView);
+        //TODO actually use the selected image rather than unhiding our "prepared earlier" one
+        imageView.setVisibility(View.VISIBLE);
     }
-    public String getPath(Uri uri) {
-        // just some safety built in
-        if( uri == null ) {
-            // TODO perform some logging or show user feedback
-            return null;
-        }
-        // try to retrieve the image from the media store first
-        // this will only work for images selected from gallery
-        String[] projection = { MediaStore.Images.Media.DATA };
-        Cursor cursor = managedQuery(uri, projection, null, null, null);
-        if( cursor != null ){
-            int column_index = cursor
-                    .getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
-            cursor.moveToFirst();
-            return cursor.getString(column_index);
-        }
-        // this is our fallback here
-        return uri.getPath();
-    }
+
 
 }
