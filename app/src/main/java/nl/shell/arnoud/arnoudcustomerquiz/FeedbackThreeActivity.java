@@ -37,7 +37,7 @@ public class FeedbackThreeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void continueButton(View view) {
-        //Intent intent = new Intent(this, FeedbackFourActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, FeedbackFourActivity.class);
+        startActivity(intent);
     }
 }
