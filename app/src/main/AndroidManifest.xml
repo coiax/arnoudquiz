@@ -65,6 +65,10 @@
             android:name=".EndActivity"
             android:label="@string/title_activity_end" >
         </activity>
+        <activity
+            android:name=".ReferralActivity"
+            android:label="@string/title_activity_referral" >
+        </activity>
     </application>
 
 </manifest>
