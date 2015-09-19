@@ -53,6 +53,10 @@
             android:name=".FeedbackTwoActivity"
             android:label="@string/title_activity_feedback_two" >
         </activity>
+        <activity
+            android:name=".FeedbackThreeActivity"
+            android:label="@string/title_activity_feedback_three" >
+        </activity>
     </application>
 
 </manifest>

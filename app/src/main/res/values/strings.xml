@@ -57,4 +57,5 @@
     <string name="intro2">And you can win a prize daily!</string>
     <string name="handshake_description">An outstretched handshake</string>
     <string name="title_activity_feedback_two">Challenge 2</string>
+    <string name="title_activity_feedback_three">Challenge 3</string>
 </resources>
