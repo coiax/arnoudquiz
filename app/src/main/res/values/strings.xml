@@ -65,4 +65,9 @@
     <string name="price_text">Price</string>
     <string name="skip_button">Skip</string>
     <string name="title_activity_feedback_four">Challenge 4</string>
+    <string name="title_activity_feedback_five">Challenge 5</string>
+    <string name="title_activity_end">Thank you!</string>
+    <string name="end1">Thank you for your input! These could help improve our services and products for you.</string>
+    <string name="end3">We will contact you by email in case you are today\'s winner.</string>
+    <string name="end2">You can now submit your answers to us.</string>
 </resources>

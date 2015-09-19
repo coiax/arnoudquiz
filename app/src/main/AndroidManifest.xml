@@ -61,6 +61,10 @@
             android:name=".FeedbackFourActivity"
             android:label="@string/title_activity_feedback_four" >
         </activity>
+        <activity
+            android:name=".EndActivity"
+            android:label="@string/title_activity_end" >
+        </activity>
     </application>
 
 </manifest>
