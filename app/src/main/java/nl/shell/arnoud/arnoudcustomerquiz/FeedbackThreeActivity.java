@@ -1,9 +1,11 @@
 package nl.shell.arnoud.arnoudcustomerquiz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class FeedbackThreeActivity extends AppCompatActivity {
 
@@ -33,5 +35,9 @@ public class FeedbackThreeActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void continueButton(View view) {
+        //Intent intent = new Intent(this, FeedbackFourActivity.class);
+        //startActivity(intent);
     }
 }

@@ -58,4 +58,10 @@
     <string name="handshake_description">An outstretched handshake</string>
     <string name="title_activity_feedback_two">Challenge 2</string>
     <string name="title_activity_feedback_three">Challenge 3</string>
+    <string name="challenge3_title">Challenge 3</string>
+    <string name="challenge3text1">Would you like to rate your local Shell station?</string>
+    <string name="service_text">Service</string>
+    <string name="shop_text">Shop</string>
+    <string name="price_text">Price</string>
+    <string name="skip_button">Skip</string>
 </resources>
