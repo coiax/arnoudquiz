@@ -1,6 +1,7 @@
 package nl.shell.arnoud.arnoudcustomerquiz;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.VideoView;
 
 public class QuestionTwoActivity extends AppCompatActivity {
+    static final private String VIDEO_URL = "http://www.youtube.com/watch?v=8WXQNakgluM";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,7 @@ public class QuestionTwoActivity extends AppCompatActivity {
 
         //VideoView vv = (VideoView) findViewById(R.id.videoView);
         //vv.setVideoPath(getString(R.string.question2videopath));
+        //TODO get youtube video embedded
     }
 
     @Override
@@ -43,6 +46,12 @@ public class QuestionTwoActivity extends AppCompatActivity {
 
     public void continueButton(View view) {
         Intent intent = new Intent(this, QuestionThreeActivity.class);
+        startActivity(intent);
+    }
+
+    public void openVideo(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(VIDEO_URL));
         startActivity(intent);
     }
 

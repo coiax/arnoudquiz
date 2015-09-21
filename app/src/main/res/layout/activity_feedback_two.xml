@@ -70,4 +70,14 @@
         android:layout_centerHorizontal="true"
         android:onClick="continueButton" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView16"
+        android:layout_below="@+id/textView24"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/thumb2"
+        android:layout_above="@+id/editText2"
+        android:onClick="openVideo" />
+
 </RelativeLayout>

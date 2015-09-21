@@ -45,33 +45,13 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:src="@drawable/loading"
-        android:contentDescription="@string/fakeloadingindicator_text"
-        android:layout_below="@+id/textView16"
-        android:layout_alignParentTop="false"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/continuestring"
-        android:id="@+id/button5"
-        android:background="#002f6c"
-        android:textColor="#ffffff"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="continueButton" />
-
     <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_toStartOf="@+id/imageView2"
-        android:layout_below="@+id/imageView2"
-        android:layout_above="@+id/button5">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_above="@+id/button5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -94,5 +74,27 @@
             android:id="@+id/radioButton3"
             android:checked="false" />
     </RadioGroup>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/textView16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/thumb1"
+        android:layout_above="@+id/radioGroup"
+        android:onClick="openVideo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continuestring"
+        android:id="@+id/button5"
+        android:background="#002f6c"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="continueButton" />
 
 </RelativeLayout>

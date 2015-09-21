@@ -1,6 +1,7 @@
 package nl.shell.arnoud.arnoudcustomerquiz;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,11 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class FeedbackTwoActivity extends AppCompatActivity {
+    static final private String VIDEO_URL = "http://www.youtube.com/watch?v=PKsuArGJPnM";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback_two);
+        //TODO get youtube video embedded
     }
 
     @Override
@@ -40,4 +44,10 @@ public class FeedbackTwoActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FeedbackThreeActivity.class);
         startActivity(intent);
     }
+    public void openVideo(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse(VIDEO_URL));
+        startActivity(intent);
+    }
+
 }
